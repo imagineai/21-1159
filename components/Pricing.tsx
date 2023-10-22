@@ -20,7 +20,7 @@ const Pricing: React.FC<PricingProps> = ({ plans }) => {
         {isAnnual ? 'Switch to Monthly' : 'Switch to Annual'}
       </button>
       {plans.map((plan) => (
-        <div key={plan.name}>
+        <div key={plan.name} className="border-2 border-transparent hover:border-blue-500 transition-all">
           <h2>{plan.name}</h2>
           <p>{isAnnual ? plan.annualPrice : plan.monthlyPrice}</p>
           <ul>
